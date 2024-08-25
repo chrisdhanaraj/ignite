@@ -17,9 +17,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    PlexRegular: require("../assets/fonts/IBMPlexSans-Regular.ttf"),
-    PlexLight: require("../assets/fonts/IBMPlexSans-Light.ttf"),
-    PlexBold: require("../assets/fonts/IBMPlexSans-Bold.ttf"),
+    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
   });
 
   useEffect(() => {
@@ -36,6 +34,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="tabs" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
   );
